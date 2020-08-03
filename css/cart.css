@@ -1,0 +1,154 @@
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.top,
+.searpart,
+.navigation {
+    width: 100%;
+}
+
+.wrap {
+    width: 1440px;
+    margin: 0 auto;
+}
+
+.top {
+    height: 30px;
+    background-color: gray;
+}
+
+.firstnav {
+    float: left;
+    margin: 7px 20px 7px 0;
+    height: 16px;
+    width: 60px;
+    font-size: 12px;
+    line-height: 12px;
+}
+
+.messagenav {
+    float: left;
+    margin: 7px 0 7px 0;
+    height: 16px;
+    width: 206px;
+    font-size: 12px;
+    line-height: 12px;
+}
+
+.right {
+    float: right;
+}
+
+.loginnav {
+    float: left;
+    margin: 7px 10px 7px 10px;
+    height: 16px;
+    width: 140px;
+    font-size: 12px;
+    line-height: 12px;
+}
+
+.membernav {
+    float: left;
+    margin: 7px 8px 7px 8px;
+    height: 16px;
+    width: 79px;
+    font-size: 12px;
+    line-height: 12px;
+}
+
+.ordernav {
+    float: left;
+    margin: 7px 0 7px 0;
+    height: 16px;
+    width: 83px;
+    font-size: 12px;
+    line-height: 12px;
+}
+
+.downloadnav {
+    float: left;
+    margin: 7px 0 7px 0;
+    height: 16px;
+    width: 80px;
+    font-size: 12px;
+    line-height: 12px;
+}
+
+.searpart .wrap {
+    margin-top: 10px;
+    height: 60px;
+}
+
+.searpart .wrap .iconbox {
+    float: left;
+}
+
+.searpart .wrap .sear {
+    float: right;
+}
+
+.searpart .wrap .sear input {
+    width: 230px;
+    height: 20px;
+    outline: 0 none;
+}
+
+.mainpart .wrap {
+    width: 1200px;
+}
+
+.carthead {
+    border: 1px solid black;
+}
+
+.carthead span {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 12px;
+    text-align: center;
+    padding-top: 10px;
+    height: 20px;
+}
+
+.carthead span:first-child {
+    width: 125px;
+}
+
+.carthead span:nth-child(2) {
+    width: 48px;
+}
+
+.carthead span:nth-child(3) {
+    width: 435px;
+}
+
+.carthead span:nth-child(4) {
+    width: 280px;
+}
+
+.carthead span:nth-child(5) {
+    width: 110px;
+}
+
+.carthead span:nth-child(6) {
+    width: 90px;
+}
+
+.cartgoods li {
+    width: 1198px;
+    height: 115px;
+    padding: 0 30px;
+}
+
+.cartgoods .cartgoodslist {
+    width: 1094px;
+    height: 75px;
+    padding: 20px 0 20px 35px;
+    background-color: black;
+}

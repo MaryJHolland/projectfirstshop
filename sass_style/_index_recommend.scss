@@ -1,0 +1,100 @@
+@charset "utf-8";
+//盒子尺寸
+@mixin boxsize($w:100px, $h:100px, $bgc:white) {
+    width: $w;
+    height: $h;
+    background-color: $bgc;
+}
+
+//弹性盒
+@mixin flexbox($f:flex, $way:space-around) {
+    display: $f;
+    align-items: center;
+    justify-content: $way;
+    align-items: baseline;
+}
+
+//盒子边框
+@mixin borderstyle($n:1px, $s:solid, $c:#e5e5e5) {
+    border: $n $s $c;
+}
+
+//margin&padding值
+@mixin marginpadding($margin, $padding) {
+    margin: $margin;
+    padding: $padding;
+}
+
+//字体大小
+@mixin fontstyle($size:12px, $bold:normal, $center:center, $boxheight:30px, $color:black) {
+    font-size: $size;
+    font-weight: $bold;
+    text-align: $center;
+    line-height: $boxheight;
+    color: $color;
+}
+
+//定位
+@mixin positionconfirm($top, $right) {
+    position: absolute;
+    top: $top;
+    right: $right;
+}
+
+//按钮
+@mixin buttonstyle() {
+    cursor: pointer;
+    outline: 0 none;
+    border: none;
+}
+
+.recommend {
+    @include boxsize(100%, auto, transparent);
+    .rec_wrap {
+        @include boxsize(1071px, auto, pink);
+        @include marginpadding(0 auto, 0);
+        .title {
+            @include boxsize(390px, 87px, transparent);
+            @include marginpadding(0 auto, 0);
+            img {
+                @include boxsize(390px, 65px, transparent);
+                @include marginpadding(0 auto, 0);
+            }
+            p {
+                @include boxsize(155px, 22px, transparent);
+                @include marginpadding(0 auto, 0);
+            }
+        }
+        .lazy_area {
+            @include boxsize(1071px, 421px, pink);
+            @include marginpadding(0 auto, 0);
+            li {
+                @include boxsize(168px, 236px, pink);
+                float: left;
+                @include borderstyle(1px, solid, white);
+                float: left;
+                .img {
+                    @include boxsize(150px, 150px, green);
+                    @include marginpadding(10px 0 0 10px, 0);
+                }
+                img {
+                    @include boxsize(150px, 150px);
+                }
+                p {
+                    @include boxsize(150px, 38px);
+                    @include marginpadding(5px 0 0 10px, 0);
+                    @include fontstyle(12px)
+                }
+                .price {
+                    margin-top: 10px;
+                    @include flexbox(flex, space-between);
+                    @include boxsize(168px, 18px, red);
+                    span {
+                        display: inline-block;
+                        @include boxsize(32px, 18px);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,221 @@
+@charset "utf-8";
+//盒子尺寸
+@mixin boxsize($w:100px, $h:100px, $bgc:white) {
+    width: $w;
+    height: $h;
+    background-color: $bgc;
+}
+
+//突起效果
+@mixin tuqi () {
+    margin-top: 0px;
+    box-shadow: 0 0 20px 2px #918f8f;
+    transition: all 0.5s;
+}
+
+//弹性盒
+@mixin flexbox($f:flex, $way:space-around) {
+    display: $f;
+    align-items: center;
+    justify-content: $way;
+    align-items: baseline;
+}
+
+//盒子边框
+@mixin borderstyle($n:1px, $s:solid, $c:#e5e5e5) {
+    border: $n $s $c;
+}
+
+//margin&padding值
+@mixin marginpadding($margin, $padding) {
+    margin: $margin;
+    padding: $padding;
+}
+
+//字体大小
+@mixin fontstyle($size:12px, $bold:normal, $center:center, $boxheight:30px, $color:black) {
+    font-size: $size;
+    font-weight: $bold;
+    text-align: $center;
+    line-height: $boxheight;
+    color: $color;
+}
+
+//定位
+@mixin positionconfirm($top, $right) {
+    position: absolute;
+    top: $top;
+    right: $right;
+}
+
+//按钮
+@mixin buttonstyle() {
+    cursor: pointer;
+    outline: 0 none;
+    border: 1px solid white;
+    background-color: transparent;
+}
+
+.beautifulwomen {
+    margin-top: 20px;
+    .bwomen_wrap {
+        @include boxsize(1071px, 421px);
+        @include marginpadding(0 auto, 0);
+        .left {
+            float: left;
+            @include boxsize(899px, 421px, green);
+            .title {
+                @include boxsize(899px, 67px, white);
+                span:first-child {
+                    @include boxsize(104px, 35px, white);
+                    @include fontstyle(26px, bolder, left, 26px, #E451A8);
+                    display: inline-block;
+                    @include marginpadding(17px 0 0 2px, 0);
+                }
+                span:last-child {
+                    @include boxsize(140px, 21px, white);
+                    @include fontstyle(16px, normal, left, 21px, #fa96d2);
+                    @include marginpadding(27px 0 0 8px, 0);
+                    display: inline-block;
+                }
+            }
+            .splitarea {
+                @include boxsize(879px, 354px, white);
+                @include marginpadding(0, 0 0 0 20px);
+            }
+            .split_wrap {
+                @include flexbox();
+                @include marginpadding(0, 20px 20px 20px 0);
+                @include boxsize(859px, 314px, white);
+            }
+            .wrap_left {
+                @include boxsize(189px, 314px);
+                position: relative;
+                img {
+                    @include boxsize(189px, 314px);
+                }
+            }
+            .choosebutton {
+                @include boxsize(166px, 90px, transparent);
+                @include positionconfirm(20px, 0px);
+                @include marginpadding(0, 0 0 0 20px);
+            }
+            button {
+                @include boxsize(76px, 25px);
+                float: left;
+                @include marginpadding(2px 5px 2px 0, 0);
+                @include buttonstyle();
+                color: white;
+            }
+            .wrap_right {
+                @include boxsize(670px, 314px, green);
+                @for $num from 1 through 4 {
+                    @if $num==1 or $num==4 {
+                        .area#{$num} {
+                            @include boxsize(335px, 157px, #ffdffc !important);
+                            float: left;
+                            p {
+                                @include fontstyle(14px, normal, left, 20px, #E4933B);
+                                @include boxsize(147.5px, 20px, transparent);
+                            }
+                        }
+                        .part_con {
+                            @include boxsize(147.5px, 67px, transparent);
+                            @include marginpadding(40px 0 0 20px, 0);
+                        }
+                        button {
+                            @include buttonstyle();
+                            @include boxsize(78px, 27px, transparent);
+                            color: #E4933B;
+                        }
+                    }
+                    @if $num==2 or $num==3 {
+                        .area#{$num} {
+                            @include boxsize(335px, 157px, white);
+                            float: left;
+                        }
+                    }
+                }
+                @for $num from 1 through 2 {
+                    .part#{$num} {
+                        @include boxsize(167.5px, 157px, transparent);
+                        float: left;
+                    }
+                }
+                img {
+                    @include boxsize(167.5px, 157px);
+                }
+                .goodstitle {
+                    @include boxsize(102px, 14px);
+                    @include marginpadding(15px 0 7px 15px, 0);
+                    @include fontstyle(12px, bold, left, 14px, #333);
+                }
+                .goodsprice {
+                    @include boxsize(102px, 14px);
+                    @include marginpadding(-1px 0 7px 13px, 0);
+                    @include fontstyle(12px, bold, left, 14px, #333);
+                }
+                .goodsimg {
+                    @include boxsize(90px, 90px);
+                    @include marginpadding(15px 0 0px 66px, 0);
+                    img {
+                        @include boxsize(90px, 90px);
+                    }
+                }
+            }
+        }
+        .right {
+            margin-left: 1px;
+            float: left;
+            @include boxsize(171px, 421px, white);
+            .right_title {
+                @include boxsize(130px, 21px);
+                @include marginpadding(20px 0 0 20px, 0);
+            }
+            .right_sectitle {
+                @include boxsize(130px, 21px);
+                @include marginpadding(7px 0 0 20px, 0);
+                @include fontstyle(12px, normal, left, 20px, grey)
+            }
+            .renderpart {
+                @include boxsize(120px, 317px);
+                @include marginpadding(10px 0 0 24px, 0);
+                position: relative;
+                @for $n from 1 through 3 {
+                    .render#{$n} {
+                        @include boxsize(120px, 317px);
+                        @include positionconfirm(0, 0);
+                        .toppaixu {
+                            @include boxsize(90px, 90px);
+                            @include marginpadding(11px 0 0 16px, 0);
+                            position: relative;
+                            .num {
+                                @include positionconfirm(0, 49px);
+                                @include boxsize(40px, 16px, #E451A8);
+                            }
+                            .img {
+                                @include boxsize(90px, 90px, transparent);
+                                box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.07);
+                                img {
+                                    @include boxsize(60px, 60px, transparent);
+                                    @include marginpadding(0, 15px)
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .buttonbox {
+                @include boxsize(50px, 22px);
+                @include flexbox(flex, space-between);
+                @include marginpadding(2px 0 0 58px, 0);
+            }
+            button {
+                border-radius: 50%;
+                @include buttonstyle();
+                @include boxsize(20px, 20px, rgb(182, 179, 179));
+                ;
+            }
+        }
+    }
+}

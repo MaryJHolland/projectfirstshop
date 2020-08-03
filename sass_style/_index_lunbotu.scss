@@ -1,0 +1,78 @@
+@charset "utf-8";
+//盒子尺寸
+@mixin boxsize($w:100px, $h:100px, $bgc:white) {
+    width: $w;
+    height: $h;
+    background: $bgc;
+}
+
+//弹性盒
+@mixin flexbox($f:flex, $way:space-around) {
+    display: $f;
+    align-items: center;
+    justify-content: $way;
+    align-items: baseline;
+}
+
+//盒子边框
+@mixin borderstyle($n:1px, $s:solid, $c:#e5e5e5) {
+    border: $n $s $c;
+}
+
+//margin&padding值
+@mixin marginpadding($margin, $padding) {
+    margin: $margin;
+    padding: $padding;
+}
+
+//字体大小
+@mixin fontstyle($size:12px, $bold:normal, $center:center, $boxheight:30px, $color:black) {
+    font-size: $size;
+    font-weight: $bold;
+    text-align: $center;
+    line-height: $boxheight;
+    color: $color;
+}
+
+//定位
+@mixin positionconfirm($bottom, $left) {
+    position: absolute;
+    bottom: $bottom;
+    left: $left;
+}
+
+//按钮
+@mixin buttonstyle() {
+    cursor: pointer;
+    outline: 0 none;
+}
+
+.lunbotu {
+    @include boxsize(100%, 400px, yellowgreen);
+    .mainwrap {
+        @include boxsize(1070px, 400px, transparent);
+        @include marginpadding(0 auto, 0);
+        position: relative;
+        @for $num from 1 through 5 {
+            .img#{$num} {
+                @include boxsize(1070px, 400px, yellow);
+                @include positionconfirm(0, 0);
+            }
+        }
+        ol {
+            @include positionconfirm(10px, 48%);
+            @include flexbox(flex, space-around);
+            @include boxsize(60px, 10px, transparent);
+        }
+        li {
+            @include boxsize(10px, 10px, red);
+            border-radius: 50%;
+        }
+        .arrow {
+            @include positionconfirm(50%, 0);
+            @include flexbox(flex, space-between);
+            @include boxsize(1070px, 40px, transparent);
+            font-size: 20px;
+        }
+    }
+}

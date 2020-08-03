@@ -1,0 +1,88 @@
+        @charset "utf-8";
+        //盒子尺寸
+        @mixin boxsize($w:100px, $h:100px, $bgc:white) {
+            width: $w;
+            height: $h;
+            background-color: $bgc;
+        }
+        
+        //突起效果
+        @mixin tuqi () {
+            margin-top: 0px;
+            box-shadow: 0 0 20px 2px #918f8f;
+            transition: all 0.5s;
+        }
+        
+        //弹性盒
+        @mixin flexbox($f:flex, $way:space-around) {
+            display: $f;
+            align-items: center;
+            justify-content: $way;
+            align-items: baseline;
+        }
+        
+        //盒子边框
+        @mixin borderstyle($n:1px, $s:solid, $c:#e5e5e5) {
+            border: $n $s $c;
+        }
+        
+        //margin&padding值
+        @mixin marginpadding($margin, $padding) {
+            margin: $margin;
+            padding: $padding;
+        }
+        
+        //字体大小
+        @mixin fontstyle($size:12px, $bold:normal, $center:center, $boxheight:30px, $color:black) {
+            font-size: $size;
+            font-weight: $bold;
+            text-align: $center;
+            line-height: $boxheight;
+            color: $color;
+        }
+        
+        //定位
+        @mixin positionconfirm($top, $right) {
+            position: absolute;
+            top: $top;
+            right: $right;
+        }
+        
+        //按钮
+        @mixin buttonstyle() {
+            cursor: pointer;
+            outline: 0 none;
+            border: none;
+        }
+        
+        .surpersingle {
+            margin-top: 20px;
+            @include boxsize(100%, 450px, blue);
+            .area_wrap {
+                @include boxsize(1050px, 360px, red);
+                @include marginpadding(0 auto, 10px 10px 0 10px);
+                li:nth-last-child(n+1) {
+                    float: left;
+                    @include boxsize(210px, 216px, white);
+                    @include tuqi();
+                }
+                // li:nth-child(1) {
+                //     @include boxsize(210px, 216px, red);
+                // }
+                // @for $listnum from 1 through 10 {
+                //     @if $listnum !=1 {
+                //         li {
+                //              :nth-child(#{$listnum}):hover {
+                //                 @include tuqi()
+                //             }
+                //         }
+                //         @else {
+                //             li {
+                //                  :nth-child(#{$listnum}) {
+                //                     @include boxsize(210px, 216px, red);
+                //                 }
+                //             }
+                //         }
+                //     }
+            }
+        }

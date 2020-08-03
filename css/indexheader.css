@@ -1,0 +1,208 @@
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.top,
+.searpart,
+.navigation {
+    width: 100%;
+}
+
+.wrap {
+    width: 1440px;
+    margin: 0 auto;
+}
+
+.top {
+    height: 30px;
+    background-color: gray;
+}
+
+.firstnav {
+    float: left;
+    margin: 7px 20px 7px 0;
+    height: 16px;
+    width: 60px;
+    font-size: 12px;
+    line-height: 12px;
+}
+
+.messagenav {
+    float: left;
+    margin: 7px 0 7px 0;
+    height: 16px;
+    width: 206px;
+    font-size: 12px;
+    line-height: 12px;
+}
+
+.right {
+    float: right;
+}
+
+.loginnav {
+    float: left;
+    margin: 7px 10px 7px 10px;
+    height: 16px;
+    width: 140px;
+    font-size: 12px;
+    line-height: 12px;
+}
+
+.membernav {
+    float: left;
+    margin: 7px 8px 7px 8px;
+    height: 16px;
+    width: 79px;
+    font-size: 12px;
+    line-height: 12px;
+}
+
+.ordernav {
+    float: left;
+    margin: 7px 0 7px 0;
+    height: 16px;
+    width: 83px;
+    font-size: 12px;
+    line-height: 12px;
+}
+
+.downloadnav {
+    float: left;
+    margin: 7px 0 7px 0;
+    height: 16px;
+    width: 80px;
+    font-size: 12px;
+    line-height: 12px;
+}
+
+.searpart {
+    height: 180px;
+}
+
+.navigation {
+    height: 38px;
+    border-bottom: 3px solid rgb(253, 60, 60);
+}
+
+.searpart img:first-child {
+    width: 140px;
+    height: 140px;
+}
+
+.searpart img:last-child {
+    width: 160px;
+    height: 60px;
+}
+
+.searpart .imgbox {
+    width: 300px;
+    float: left;
+}
+
+.searpart .search {
+    float: left;
+    width: 800px;
+    height: 40px;
+    border-radius: 20px;
+    border: 2px solid red;
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+.searpart .search input {
+    width: 696px;
+    height: 36px;
+    border: none;
+    margin-left: 32px;
+    outline: 0 none;
+}
+
+.searpart .search button {
+    background-color: red;
+    outline: 0 none;
+    height: 40px;
+    width: 68px;
+    border: none;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    cursor: pointer;
+}
+
+.searpart .shopcart button {
+    position: absolute;
+    top: 89px;
+    right: 110px;
+    width: 120px;
+    height: 40px;
+    border-radius: 21px;
+    border: 1px solid rgb(153, 153, 153);
+    text-align: center;
+    color: #333;
+    font-size: 16px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.navigation .wrap .catagory {
+    float: left;
+    position: relative;
+}
+
+.navigation .wrap .catagory .title {
+    width: 140px;
+    height: 40px;
+    background-color: red;
+    line-height: 20px;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
+
+.navigation .wrap .catagory .classify {
+    width: 1440px;
+    height: 500px;
+    border: 1px solid red;
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    display: none;
+}
+
+.navigation .wrap .catagory .classify .classifylist {
+    width: 250px;
+    height: 500px;
+    border: 1px solid grey;
+}
+
+.navigation .wrap .catagory .classify .morelist {
+    width: 1000px;
+    height: 500px;
+    border: 1px solid green;
+    position: absolute;
+    top: 0;
+    left: 251px;
+}
+
+.navigation .wrap .title1 {
+    float: left;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0px;
+}
+
+.navigation .wrap .title1 li {
+    width: 64px;
+    height: 37px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 16px;
+    margin-bottom: 5px;
+    margin-left: 30px;
+}

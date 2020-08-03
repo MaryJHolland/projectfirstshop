@@ -1,0 +1,84 @@
+.content .wrap {
+    display: flex;
+}
+
+.content .wrap .img {
+    margin: 45px;
+}
+
+.loginform {
+    margin-top: 45px;
+}
+
+.loginform .title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.loginform p {
+    margin-top: 5px;
+}
+
+.loginform span {
+    font-size: 12px;
+}
+
+.loginform input {
+    width: 330px;
+    height: 52px;
+    margin-top: 8px;
+}
+
+.loginform .notice {
+    font-size: 12px;
+}
+
+.loginform .loginfail {
+    width: 330px;
+    height: 25px;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 5px;
+    font-size: 12px;
+    line-height: 25px;
+    color: grey;
+    background-color: lightyellow;
+}
+
+.loginform .check {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+.loginform .check input {
+    width: 12px;
+    height: 12px;
+}
+
+.loginform .loginbutton input {
+    background-color: #ff3c3c;
+    border: none;
+}
+
+.loginform .moreloginways {
+    width: 330px;
+    font-size: 12px;
+    color: gray;
+    position: relative;
+}
+
+.loginform .moreloginways .iconbox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.loginform .moreloginways ul {
+    position: absolute;
+    top: 26px;
+    left: 0;
+}
+
+.loginform .moreloginways li {
+    float: left;
+}

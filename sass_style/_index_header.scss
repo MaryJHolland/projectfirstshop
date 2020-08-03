@@ -1,0 +1,175 @@
+@charset "utf-8";
+//盒子尺寸
+@mixin boxsize($w:100px, $h:100px, $bgc:white) {
+    width: $w;
+    height: $h;
+    background-color: $bgc;
+}
+
+//弹性盒
+@mixin flexbox($f:flex, $way:space-around) {
+    display: $f;
+    align-items: center;
+    justify-content: $way;
+    align-items: baseline;
+}
+
+//盒子边框
+@mixin borderstyle($n:1px, $s:solid, $c:#e5e5e5) {
+    border: $n $s $c;
+}
+
+//margin&padding值
+@mixin marginpadding($margin, $padding) {
+    margin: $margin;
+    padding: $padding;
+}
+
+//字体大小
+@mixin fontstyle($size:12px, $bold:normal, $center:center, $boxheight:30px, $color:black) {
+    font-size: $size;
+    font-weight: $bold;
+    text-align: $center;
+    line-height: $boxheight;
+    color: $color;
+}
+
+//定位
+@mixin positionconfirm($top, $right) {
+    position: absolute;
+    top: $top;
+    right: $right;
+}
+
+//按钮
+@mixin buttonstyle() {
+    cursor: pointer;
+    outline: 0 none;
+    border: none;
+}
+
+* {
+    @include marginpadding(0, 0);
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.header {
+    .top {
+        @include boxsize(100%, 30px, #f4f4f4);
+        @include borderstyle();
+        .top_wrap {
+            @include boxsize(1070px, 30px, transparent);
+            @include marginpadding(0 auto, 0);
+        }
+        .firstnav {
+            float: left;
+            @include fontstyle();
+            @include boxsize(100px, 30px, transparent);
+            @include marginpadding(0, 0 10px 0 10px);
+        }
+        .messagenav {
+            float: left;
+            @include fontstyle();
+            @include boxsize(230px, 30px, transparent);
+            @include marginpadding(0, 0 10px 0 20px);
+        }
+        .right {
+            float: right;
+            @include flexbox();
+            @include boxsize(320px, 30px, transparent);
+            .loginnav {
+                @include boxsize(120px, 30px, #f4f4f4);
+                @include fontstyle();
+            }
+            .membernav {
+                @include boxsize(79px, 30px, #f4f4f4);
+                @include fontstyle();
+                @include marginpadding(0, 0 8px 0 8px);
+            }
+            .ordernav {
+                @include boxsize(120px, 30px, #f4f4f4);
+                @include fontstyle();
+            }
+        }
+    }
+    .searpart {
+        @include boxsize(100%, 140px);
+        position: relative;
+        .sear_wrap {
+            @include boxsize(1070px, 140px, transparent);
+            @include marginpadding(0 auto, 0);
+            .imgbox {
+                @include boxsize(300px, 140px);
+                img {
+                    @include boxsize(140px, 140px, transparent);
+                }
+                float: left;
+            }
+            .search {
+                float: left;
+                @include borderstyle(2px, solid, rgb(153, 153, 153));
+                margin-top: 50px;
+                border-radius: 21px;
+                input {
+                    @include boxsize(508px, 36px, transparent);
+                    border: none;
+                    margin-left: 32px;
+                    outline: 0 none;
+                }
+                button {
+                    @include boxsize(50px, 40px, transparent);
+                    @include buttonstyle();
+                    border-top-right-radius: 18px;
+                    border-bottom-right-radius: 18px;
+                }
+            }
+        }
+        .shopcart {
+            @include positionconfirm(50px, 240px);
+            @include boxsize(122px, 40px, transparent);
+            button {
+                @include boxsize(120px, 40px, transparent);
+                @include borderstyle(1px, solid, rgb(153, 153, 153));
+                @include fontstyle(16px, normal, center, 20px, #333);
+                border-radius: 21px;
+                cursor: pointer;
+            }
+        }
+    }
+    .navigation {
+        .nav_wrap {
+            @include boxsize(1070px, 40px, transparent);
+            @include marginpadding(0 auto, 0);
+        }
+        .catagory {
+            float: left;
+            position: relative;
+            .title {
+                @include boxsize(140px, 40px, red);
+                @include fontstyle(20px, normal, center, 40px, white);
+            }
+            .classify {
+                display: none;
+            }
+        }
+        .title1 {
+            float: left;
+            display: flex;
+            justify-content: flex-start;
+            @include marginpadding(0, 0);
+            li {
+                margin-left: 20px;
+                @include boxsize(64px, 38px, white);
+                @include fontstyle(16px, normal, center, 38px, #333)
+            }
+        }
+    }
+}

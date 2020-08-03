@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(103, 212, 248);
+}
+
+li {
+    list-style: none;
+}
+
+header,
+.content,
+.footer {
+    width: 100%;
+}
+
+.wrap {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+header .wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+header .wrap .note {
+    display: flex;
+    justify-content: space-between;
+    width: 294px;
+    height: 20px;
+    margin-top: 16px;
+}
+
+header .wrap .note .login {
+    width: 169px;
+    height: 18px;
+    font-size: 12px;
+    color: gray;
+}
+
+header .wrap .note .help {
+    width: 94px;
+    height: 18px;
+    font-size: 12px;
+    color: gray;
+    border: 1px solid gray;
+    position: relative;
+}
+
+header .wrap .note .help .list {
+    display: block;
+    position: absolute;
+    top: 19px;
+    left: -1px;
+}
+
+header .wrap .note .help li {
+    border: 1px solid gray;
+    width: 88px;
+    height: 12px;
+    padding: 3px;
+    text-align: center;
+}
+
+.wrap .icon {
+    width: 145px;
+    height: 55px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}

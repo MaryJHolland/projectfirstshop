@@ -1,0 +1,164 @@
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+.detailcontent {
+    margin-top: 10px;
+}
+
+.detailcontent .wrap .left {
+    width: 400px;
+    height: 526px;
+    border: 1px dashed green;
+    position: relative;
+    margin-left: 150px;
+}
+
+.detailcontent .wrap .left .scale {
+    width: 398px;
+    height: 398px;
+    border: 1px dashed red;
+}
+
+.detailcontent .wrap .left .smallscale {
+    width: 40px;
+    height: 40px;
+    background-color: yellow;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.detailcontent .wrap .left .smallpic img {
+    width: 400px;
+    height: 400px;
+}
+
+.detailcontent .wrap .left .smallpiclist {
+    width: 398px;
+    height: 50px;
+    border: greenyellow solid 1px;
+    background-color: greenyellow;
+    margin-top: 50px;
+}
+
+.detailcontent .wrap .left .bigpicshow {
+    width: 526px;
+    height: 526px;
+    border: 1px solid black;
+    position: absolute;
+    top: 0;
+    left: 400px;
+    overflow: hidden;
+    display: none;
+}
+
+.left .bigpicshow img {
+    width: 800px;
+    height: 800px;
+    position: absolute;
+}
+
+.detailcontent .wrap {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.detailcontent .wrap .right {
+    width: 526px;
+    height: 526px;
+    border: 1px dashed green;
+    margin-left: 20px;
+}
+
+.detailcontent .wrap .right span {
+    font-size: 12px;
+}
+
+.right ul li {
+    padding-top: 10px;
+}
+
+.right ul li:first-child {
+    width: 526px;
+    height: 55px;
+    background-color: teal;
+}
+
+.right ul li:nth-child(2) {
+    width: 526px;
+    height: 56.8px;
+    background-color: yellow;
+}
+
+.right ul li:nth-child(3) {
+    width: 526px;
+    height: 56.8px;
+    background-color: red;
+}
+
+.right ul li:nth-child(4) {
+    width: 526px;
+    height: 56.8px;
+    background-color: green;
+}
+
+.right ul li:nth-child(5) {
+    width: 526px;
+    height: 56.8px;
+    background-color: red;
+}
+
+.right ul li:nth-child(6) {
+    width: 526px;
+    height: 56.8px;
+    background-color: yellow;
+}
+
+.right ul li:nth-child(7) {
+    width: 526px;
+    height: 56.8px;
+    padding-top: 10px;
+}
+
+.right ul li:nth-child(7) input {
+    width: 50px;
+    height: 49px;
+    outline: 0 none;
+    float: left;
+}
+
+.right ul li:nth-child(7) span {
+    float: left;
+}
+
+.right ul li:nth-child(7) .btnup,
+.right ul li:nth-child(7) .btndwn {
+    width: 24px;
+    height: 24px;
+    background-color: rgb(202, 202, 202);
+    margin-top: 1px;
+    text-align: center;
+    line-height: 24px;
+    font-size: 24px;
+    border: 1px solid grey;
+}
+
+.right ul li:nth-child(7) .cartbtn {
+    float: left;
+    margin-left: 10px;
+}
+
+.right ul li:nth-child(7) .cartbtn button {
+    border: none;
+    background-color: red;
+    width: 146px;
+    height: 52px;
+    margin-right: 6px;
+    color: white;
+    cursor: pointer;
+    outline: 0 none;
+    cursor: pointer;
+}
