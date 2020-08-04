@@ -57,16 +57,24 @@
             .img#{$num} {
                 @include boxsize(1070px, 400px, yellow);
                 @include positionconfirm(0, 0);
+                display: none;
             }
         }
         ol {
             @include positionconfirm(10px, 48%);
             @include flexbox(flex, space-around);
-            @include boxsize(60px, 10px, transparent);
+            @include boxsize(100px, 10px, transparent);
         }
         li {
-            @include boxsize(10px, 10px, red);
+            @include boxsize(10px, 10px, grey);
             border-radius: 50%;
+            cursor: pointer;
+        }
+        .showpic {
+            display: block;
+        }
+        .active {
+            background-color: white;
         }
         .arrow {
             @include positionconfirm(50%, 0);
