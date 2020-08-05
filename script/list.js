@@ -1,13 +1,13 @@
 ;
 ! function() {
-    const goods = $('.main_content  .wrap');
+    const $goods = $('.main_content .wrapgoods');
+    console.log($goods);
     $.ajax({
         url: 'http://localhost/Firstshop/php/listdata.php',
         dataType: 'json'
     }).done(function(data) {
         let strhtml = '<div class= "goodsarea">';
         $.each(data, function(index, value) {
-            console.log(data);
             strhtml +=
                 `<div class="goods">
                  <div class="img"><img class="lazy" data-original="${value.url}"></div>
@@ -35,7 +35,7 @@
         `;
         });
         strhtml += '</div>';
-        goods.append(strhtml);
+        $goods.append(strhtml);
         $("img.lazy").lazyload({ effect: "fadeIn" });
 
     })
@@ -44,6 +44,8 @@
 ;
 !
 function() {
+    const $goods = $('.main_content .wrapgoods');
+
     $('.page').pagination({
         pageCount: 3, //总的页数
         jump: true, //是否开启跳转到指定的页数，布尔值。
@@ -61,9 +63,10 @@ function() {
                 },
                 dataType: 'json'
             }).done(function(data) {
+                console.log(data);
                 let strhtml = '<div class= "goodsarea">';
                 $.each(data, function(index, value) {
-                    console.log(data);
+
                     strhtml +=
                         `<div class="goods">
                  <div class="img"><img class="lazy" data-original="${value.url}"></div>
@@ -91,10 +94,24 @@ function() {
         `;
                 });
                 strhtml += '</div>';
-                goods.append(strhtml);
+                $goods.html(strhtml);
+                $(function() {
+                    $("img.lazy").lazyload({ effect: "fadeIn" });
+                });
 
             })
         }
+    })
+
+}(jQuery);
+//排序
+;
+! function() {
+    //默认排序
+    const $sort = $('.restoreorder ul li');
+    console.log($sort.eq(0));
+    $sort.eq(0).on('click', function() {
+
     })
 
 }(jQuery);

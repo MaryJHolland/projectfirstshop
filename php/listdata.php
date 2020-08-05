@@ -2,7 +2,7 @@
 include "conn.php";
 
 //设置单页数据条数
-$pagesize = 15;
+$pagesize = 8;
 //获取all数据
 $sql = "SELECT * FROM taobaogoods";
 //获取数据的结果集
