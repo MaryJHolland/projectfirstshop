@@ -9,7 +9,8 @@
         let strhtml = '<div class= "goodsarea">';
         $.each(data, function(index, value) {
             strhtml +=
-                `<div class="goods">
+                `<a href="http://localhost/Firstshop/details.html?sid=${value.sid}">
+                <div class="goods">
                  <div class="img"><img class="lazy" data-original="${value.url}"></div>
 
                  <div class="price">${value.price}</div>
@@ -32,6 +33,7 @@
                         <a href="">圃美多自营旗舰店<span></span></a>
                     </div>
                     </div>
+                    </a>
         `;
         });
         strhtml += '</div>';
@@ -68,29 +70,31 @@ function() {
                 $.each(data, function(index, value) {
 
                     strhtml +=
-                        `<div class="goods">
-                 <div class="img"><img class="lazy" data-original="${value.url}"></div>
-
-                 <div class="price">${value.price}</div>
-                    <div class="goodstitle">￥${value.title}</div>
-                    <div class="youhuiquan">123656</div>
-                    <div class="addcart">
-                        <input type="text" value="1">
-                        <span><div class="btnup">＋
-                        </div>
-                        <div class="btndwn">-</div></span>
-                        <div class="cartbtn"><button>加入购物车</button></div>
-
-                    </div>
-                    <div class="message">
-                        <div class="comments">11</div>
-                        <div class="recommand">1222</div>
-                    </div>
-                    <div class="shop">
-                        <span>自营</span>
-                        <a href="">圃美多自营旗舰店<span></span></a>
-                    </div>
-                    </div>
+                        `<a href="http://localhost/Firstshop/details.html?sid=${value.sid}">
+                        <div class="goods">
+                         <div class="img"><img class="lazy" data-original="${value.url}"></div>
+        
+                         <div class="price">${value.price}</div>
+                            <div class="goodstitle">￥${value.title}</div>
+                            <div class="youhuiquan">123656</div>
+                            <div class="addcart">
+                                <input type="text" value="1">
+                                <span><div class="btnup">＋
+                                </div>
+                                <div class="btndwn">-</div></span>
+                                <div class="cartbtn"><button>加入购物车</button></div>
+        
+                            </div>
+                            <div class="message">
+                                <div class="comments">11</div>
+                                <div class="recommand">1222</div>
+                            </div>
+                            <div class="shop">
+                                <span>自营</span>
+                                <a href="">圃美多自营旗舰店<span></span></a>
+                            </div>
+                            </div>
+                            </a>
         `;
                 });
                 strhtml += '</div>';
